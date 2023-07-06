@@ -1,10 +1,10 @@
-<div class="card lg:card-side bg-base-100 shadow-xl">
-    <slot name="figure"></slot>
-    <div class="card-body">
-      <h2 class="card-title"><slot name="title"></slot></h2>
-      <slot name="description"></slot>
-      <div class="card-actions justify-end">
-        <slot name="button"></slot>
-      </div>
-    </div>
-  </div>
+<div class="collapse collapse-arrow bg-base-200">
+	<input type="radio" name="my-accordion-2" />
+	<div class="collapse-title text-xl font-medium">
+		<slot name="title" />
+	</div>
+	<div class="collapse-content">
+		<p><slot name="description" /></p>
+		<p><slot name="button" /></p>
+	</div>
+</div>
