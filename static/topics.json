@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Input validation",
+        "description": "Input validation is important",
+        "url": "/input-validation"
+    },
+    {
+        "title": "Output encoding",
+        "description": "Output encoding also important",
+        "url": "/output-encoding"
+    },
+    {
+        "title": "Code quality",
+        "description": "Code quality should be good",
+        "url": "/code-quality"
+    }
+]
