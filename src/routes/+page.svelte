@@ -1,4 +1,47 @@
 <script lang="ts">
+	import Code from '$lib/components/Code.svelte';
+	import CodeBlock from '$lib/components/CodeBlock.svelte';
+	import TopicCard from '$lib/components/TopicCard.svelte';
+
+	function scrollToSection() {
+		const targetSection = document.querySelector('#target-section');
+		if(targetSection){
+			targetSection.scrollIntoView({ behavior: 'smooth' });			
+		}
+	}
 </script>
 
-<h2>SecureCodingCookbook</h2>
+<div class="hero min-h-screen bg-base-200">
+	<div class="hero-content text-center">
+		<div class="max-w-md">
+			<h1 class="text-5xl font-bold">Hello there</h1>
+			<p class="py-6">
+				Wellcome in the Secure Coding Cookbook site where you can read a bunch of information about
+				secure coding.
+			</p>
+			<button
+				class="btn btn-outline btn-info"
+				on:click={scrollToSection}>Info</button
+			>
+		</div>
+	</div>
+</div>
+
+<section id="target-section">
+	<TopicCard>
+
+		<span slot=title>Input Validation</span>
+		<span slot=description>Input Validation is a really important topic</span>
+
+		<a class="btn btn-outline" slot="button" href="/topic">Button to the topic</a>
+
+		<CodeBlock slot=figure>
+			<Code>Its a very long code</Code>
+			<Code>Its a very long code</Code>
+			<Code>Its a very long code</Code>
+			<Code>Its a very long code</Code>
+			<Code>Its a very long code</Code>
+		</CodeBlock>
+	</TopicCard>
+</section>
+
