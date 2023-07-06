@@ -1,12 +1,11 @@
 <script lang="ts">
-	import Code from '$lib/components/Code.svelte';
-	import CodeBlock from '$lib/components/CodeBlock.svelte';
 	import TopicCard from '$lib/components/TopicCard.svelte';
+	import TopicList from '$lib/components/TopicList.svelte';
 
 	function scrollToSection() {
 		const targetSection = document.querySelector('#target-section');
-		if(targetSection){
-			targetSection.scrollIntoView({ behavior: 'smooth' });			
+		if (targetSection) {
+			targetSection.scrollIntoView({ behavior: 'smooth' });
 		}
 	}
 </script>
@@ -19,19 +18,11 @@
 				Wellcome in the Secure Coding Cookbook site where you can read a bunch of information about
 				secure coding.
 			</p>
-			<button
-				class="btn btn-outline btn-info"
-				on:click={scrollToSection}>Info</button
-			>
+			<button class="btn btn-outline btn-info" on:click={scrollToSection}>Info</button>
 		</div>
 	</div>
 </div>
 
-<section id="target-section">
-	<TopicCard>
-		<span slot="title">Input Validation</span>
-		<span slot="description">Input Validation is a really important topic</span>
-		<a class="btn btn-outline" slot="button" href="/topic">Button to the topic</a>
-	</TopicCard>
+<section id="target-section" class="">
+	<TopicList />
 </section>
-
