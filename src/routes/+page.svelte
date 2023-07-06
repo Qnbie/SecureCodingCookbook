@@ -29,19 +29,9 @@
 
 <section id="target-section">
 	<TopicCard>
-
-		<span slot=title>Input Validation</span>
-		<span slot=description>Input Validation is a really important topic</span>
-
+		<span slot="title">Input Validation</span>
+		<span slot="description">Input Validation is a really important topic</span>
 		<a class="btn btn-outline" slot="button" href="/topic">Button to the topic</a>
-
-		<CodeBlock slot=figure>
-			<Code>Its a very long code</Code>
-			<Code>Its a very long code</Code>
-			<Code>Its a very long code</Code>
-			<Code>Its a very long code</Code>
-			<Code>Its a very long code</Code>
-		</CodeBlock>
 	</TopicCard>
 </section>
 
